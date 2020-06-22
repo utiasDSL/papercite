@@ -51,32 +51,56 @@
 <property name="dateRangeDelimit2" value="/"/>
 <property name="dateRangeSameMonth" value="1"/>
 
+<format types="old_proceedings old_unpublished old_misc">
+@?author@@author@, @;@@?title@&quot;@title@&quot;@;@@?address@@address@: @;@@?publisher@@publisher@@;@@?howpublished@, &lt;span style=&quot;font-style: italic&quot;&gt;@howpublished@&lt;/span&gt;@;@@?year@, @year@@;@. @?note@@note@.@;@
+</format>
+
 <format types="proceedings unpublished misc">
-@?author@@author@, @;@@?title@&lt;span style=&quot;font-style: italic&quot;&gt;@title@&lt;/span&gt;@;@@?address@@address@: @;@@?publisher@@publisher@@;@@?year@, @year@@;@.
+@?title@&lt;b&gt;@title@&lt;/b&gt;&lt;/br&gt;@;@@?author@@author@&lt;/br&gt;@;@@?address@@address@: @;@@?publisher@@publisher@@;@@?howpublished@&lt;span style=&quot;font-style: italic&quot;&gt;@howpublished@&lt;/span&gt;, @;@@?year@@year@@;@. @?note@@note@.@;@
 </format>
 
 <format types="book">
-@?author@@author@, @;@@?title@&lt;span style=&quot;font-style: italic&quot;&gt;@title@&lt;/span&gt;@;@@?edition@, @edition@ ed.@;@@?editor@, @editor@, @?#editor&gt;1@Eds@:editor@Ed@;editor@.@;@@?address||publisher||year||volume@, @:@@;@@?address@@address@: @;@@?publisher@@publisher@@;@@?year@, @year@@;@@?volume@, vol. @volume@@;@@?address||publisher||year||volume@.@:@@;@
+@?title@&lt;b&gt;@title@&lt;/b&gt;&lt;/br&gt;@;@@?author@@author@&lt;/br&gt;@;@@?edition@@edition@ ed.@;@@?editor@, @editor@, @?#editor&gt;1@Eds@:editor@Ed@;editor@.@;@@?address||publisher||year||volume@, @:@@;@@?address@@address@: @;@@?publisher@@publisher@@;@@?year@, @year@@;@@?volume@, vol. @volume@@;@@?address||publisher||year||volume@. @:@@;@@?note@@note@.@;@
+</format>
+
+<format types="old_inbook old_incollection">
+@?author@@author@, @;@@?title@&quot;@title@@;@@?booktitle||edition||editor@,&quot; @:@.&quot; @;@@?booktitle@in &lt;span style=&quot;font-style: italic&quot;&gt;@booktitle@&lt;/span&gt;@;@@?edition@, @edition@ ed.@;@@?editor@, @editor@, @?#editor&gt;1@Eds@:editor@Ed@;editor@.@;@@?booktitle||edition||editor@, @:@@;@@?address@@address@: @;@@?publisher@@publisher@@;@@?year@, @year@@;@@?volume@, vol. @volume@@;@@?pages@, @?#pages&gt;1@pp. @:pages@p. @;pages@@pages@@;@. @?note@@note@.@;@
 </format>
 
 <format types="inbook incollection">
-@?author@@author@, @;@@?title@&quot;@title@@;@@?booktitle||edition||editor@,&quot; @:@.&quot; @;@@?booktitle@in &lt;span style=&quot;font-style: italic&quot;&gt;@booktitle@&lt;/span&gt;@;@@?edition@, @edition@ ed.@;@@?editor@, @editor@, @?#editor&gt;1@Eds@:editor@Ed@;editor@.@;@@?booktitle||edition||editor@, @:@@;@@?address@@address@: @;@@?publisher@@publisher@@;@@?year@, @year@@;@@?volume@, vol. @volume@@;@@?pages@, @?#pages&gt;1@pp. @:pages@p. @;pages@@pages@@;@.
+@?title@&lt;b&gt;@title@&lt;/b&gt;&lt;/br&gt;@;@@?author@@author@&lt;/br&gt;@;@@?booktitle@in &lt;span style=&quot;font-style: italic&quot;&gt;@booktitle@&lt;/span&gt;@;@@?edition@, @edition@ ed.@;@@?editor@, @editor@, @?#editor&gt;1@Eds@:editor@Ed@;editor@.@;@@?booktitle||edition||editor@, @:@@;@@?address@@address@: @;@@?publisher@@publisher@@;@@?year@, @year@@;@@?volume@, vol. @volume@@;@@?pages@, @?#pages&gt;1@pp. @:pages@p. @;pages@@pages@@;@. @?note@@note@.@;@
 </format>
 
-<format types="article #">
-@?author@@author@, @;@@?title@&quot;@title@@;@@?journal||volume||number||pages||year@,&quot; @:@.&quot; @;@@?journal@&lt;span style=&quot;font-style: italic&quot;&gt;@journal@&lt;/span&gt;@;@@?volume@, vol. @volume@@;@@?number@, iss. @number@@;@@?pages@, @?#pages&gt;1@pp. @:pages@p. @;pages@@pages@@;@@?year@, @year@@;@@?journal||volume||number||pages||year@.@:@@;@
+<format types="old_article #">
+@?author@@author@, @;@@?title@&quot;@title@@;@@?journal||volume||number||pages||year@,&quot; @:@.&quot; @;@@?journal@&lt;span style=&quot;font-style: italic&quot;&gt;@journal@&lt;/span&gt;@;@@?volume@, vol. @volume@@;@@?number@, iss. @number@@;@@?pages@, @?#pages&gt;1@pp. @:pages@p. @;pages@@pages@@;@@?year@, @year@@;@@?journal||volume||number||pages||year@. @:@@;@@?note@@note@.@;@
+</format>
+
+<format types="article">
+@?title@&lt;b&gt;@title@&lt;/b&gt;&lt;/br&gt;@;@@?author@@author@&lt;/br&gt;@;@@?journal@&lt;span style=&quot;font-style: italic&quot;&gt;@journal@&lt;/span&gt;@;@@?volume@, vol. @volume@@;@@?number@, iss. @number@@;@@?pages@, @?#pages&gt;1@pp. @:pages@p. @;pages@@pages@@;@@?year@, @year@@;@@?journal||volume||number||pages||year@. @:@@;@@?note@@note@.@;@
+</format>
+
+<format types="old_inproceedings">
+@?author@@author@, @;@@?title@&quot;@title@@;@@?booktitle||address@,&quot; @:@.&quot; @;@@?booktitle@in &lt;span style=&quot;font-style: italic&quot;&gt;@booktitle@&lt;/span&gt;@;@@?address@, @address@@;@@?booktitle||address@, @:@@;@@?date@@date@@;@@?year@ @year@@;@@?pages@, @?#pages&gt;1@pp. @:pages@p. @;pages@@pages@@;@. @?note@@note@.@;@
 </format>
 
 <format types="inproceedings">
-@?author@@author@, @;@@?title@&quot;@title@@;@@?booktitle||address@,&quot; @:@.&quot; @;@@?booktitle@in &lt;span style=&quot;font-style: italic&quot;&gt;@booktitle@&lt;/span&gt;@;@@?address@, @address@@;@@?booktitle||address@, @:@@;@@?date@@date@@;@@?year@ @year@@;@@?pages@, @?#pages&gt;1@pp. @:pages@p. @;pages@@pages@@;@.
+@?title@&lt;b&gt;@title@&lt;/b&gt;&lt;/br&gt;@;@@?author@@author@&lt;/br&gt;@;@@?booktitle@in &lt;span style=&quot;font-style: italic&quot;&gt;@booktitle@&lt;/span&gt;@;@@?address@, @address@@;@@?booktitle||address@, @:@@;@@?date@@date@@;@@?year@ @year@@;@@?pages@, @?#pages&gt;1@pp. @:pages@p. @;pages@@pages@@;@. @?note@@note@.@;@
+</format>
+
+<format types="old_phdthesis old_mastersthesis">
+@?author@@author@, @;@@?title@&quot;@title@,&quot; @;@@?type@@?type@&lt;span style=&quot;font-style: italic&quot;&gt;@type@&lt;/span&gt;@;@@:@@?entrytype=phdthesis||entrytype=mastersthesis@@?entrytype=phdthesis@&lt;span style=&quot;font-style: italic&quot;&gt;PhD Thesis&lt;/span&gt;@;@@?entrytype=mastersthesis@&lt;span style=&quot;font-style: italic&quot;&gt;Master Thesis&lt;/span&gt;@;@@;@@;@@?school@, @school@@;@@?address@, @address@@;@@?year@, @year@@;@. @?note@@note@.@;@
 </format>
 
 <format types="phdthesis mastersthesis">
-@?author@@author@, @;@@?title@&quot;@title@,&quot; @;@@?type@@type@ @;@@?entrytype=phdthesis||entrytype=mastersthesis@@?entrytype=phdthesis@PhD Thesis@;@@?entrytype=mastersthesis@Master Thesis@;@@;@@?institution@, @institution@@;@@?address@, @address@@;@@?year@, @year@@;@.
+@?title@&lt;b&gt;@title@&lt;/b&gt;&lt;/br&gt;@;@@?author@@author@&lt;/br&gt;@;@@?type@@?type@&lt;span style=&quot;font-style: italic&quot;&gt;@type@&lt;/span&gt;@;@@:@@?entrytype=phdthesis||entrytype=mastersthesis@@?entrytype=phdthesis@&lt;span style=&quot;font-style: italic&quot;&gt;PhD Thesis&lt;/span&gt;@;@@?entrytype=mastersthesis@&lt;span style=&quot;font-style: italic&quot;&gt;Master Thesis&lt;/span&gt;@;@@;@@;@@?school@, @school@@;@@?address@, @address@@;@@?year@, @year@@;@. @?note@@note@.@;@
+</format>
+
+<format types="old_techreport">
+@?author@@author@, @;@@?title@&quot;@title@,&quot; &lt;span style=&quot;font-style: italic&quot;&gt;Technical Report&lt;/span&gt;@;@@?institution@, @institution@@;@@?address@, @address@@;@@?type||number@, @:@@;@@?type@@type@ @;@@?number@@number@@;@@?type||number@, @:@@;@@?date@@date@ @;@@?year@, @year@@;@. @?note@@note@.@;@
 </format>
 
 <format types="techreport">
-@?author@@author@, @;@@?title@&quot;@title@,&quot; @;@@?institution@@institution@@;@@?address@, @address@@;@@?type||number@, @:@@;@@?type@@type@ @;@@?number@@number@@;@@?type||number@, @:@@;@@?date@@date@ @;@@?year@ @year@@;@.
+@?title@&lt;b&gt;@title@&lt;/b&gt;&lt;/br&gt;@;@@?author@@author@&lt;/br&gt;&lt;span style=&quot;font-style: italic&quot;&gt;Technical Report&lt;/span&gt;@;@@?institution@, @institution@@;@@?address@, @address@@;@@?type||number@, @:@@;@@?type@@type@ @;@@?number@@number@@;@@?type||number@, @:@@;@@?date@@date@ @;@@?year@, @year@@;@. @?note@@note@.@;@
 </format>
 
 </formats>

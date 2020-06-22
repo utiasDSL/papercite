@@ -1104,28 +1104,9 @@ class Papercite
             <input type="hidden" name="papercite_post_id" value="<?php echo $post->ID ?>">
             <table style="border-top: solid 1px #eee; border-bottom: solid 1px #eee; width: 100%">
                 <tr>
-                    <td>Authors:</td>
-                    <td><select name="papercite_author" id="papercite_author">
-                            <option value="">ALL</option>
-                            <?php
-                            $authors = preg_split("#\s*\\|\s*#", $original_authors);
-                            if (Papercite::array_get($options, "sortauthors", 0)) {
-                                sort($authors);
-                            }
-
-                            foreach ($authors as $author) {
-                                print "<option value=\"" . htmlentities($author, ENT_QUOTES, "UTF-8") . "\"";
-                                if ($selected_author == $author) {
-                                    print " selected=\"selected\"";
-                                }
-                                print ">$author</option>";
-                            }
-                            ?>
-                        </select></td>
-
                     <td>Type:</td>
                     <td><select name="papercite_allow" id="papercite_type">
-                            <option value="">ALL</option>
+                            <option value="">All</option>
                             <?php
                             $types = preg_split("#\s*,\s*#", $original_allow);
                             foreach ($types as $type) {
